@@ -5,6 +5,15 @@ const createTuit = (req, res) => {
     const newTuit = req.body;
     newTuit._id = (new Date()).getTime()+'';
     newTuit.likes = 0;
+    newTuit.dislikes = 0;
+    newTuit.replies = 0;
+    newTuit.retuits = 0;
+    newTuit.time = '1h';
+    newTuit.image = '../../images/spacex.jpg';
+    newTuit.handle = 'samplehandle';
+    newTuit.topic = 'Sample Topic';
+    newTuit.username = 'Sample Username';
+    newTuit.title = 'Sample Title';
     newTuit.liked = false;
     tuits.push(newTuit);
     res.json(newTuit);
