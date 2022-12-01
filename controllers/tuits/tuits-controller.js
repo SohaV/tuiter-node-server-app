@@ -4,7 +4,7 @@ let tuits = posts;
 const createTuit = (req, res) => {
     const newTuit = req.body;
     newTuit._id = (new Date()).getTime()+'';
-    newTuit.likes = 0;
+    newTuit.likes = 1;
     newTuit.dislikes = 0;
     newTuit.replies = 0;
     newTuit.retuits = 0;
@@ -14,7 +14,7 @@ const createTuit = (req, res) => {
     newTuit.topic = 'Sample Topic';
     newTuit.username = 'Sample Username';
     newTuit.title = 'Sample Title';
-    newTuit.liked = false;
+    newTuit.liked = true;
     tuits.push(newTuit);
     res.json(newTuit);
 }
